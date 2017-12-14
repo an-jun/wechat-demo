@@ -18,13 +18,13 @@ func (c *WxConnectController) Createmenu() {
 	// if err != nil {
 	// 	fmt.Println("向微信服务器发送获取accessToken的get请求失败", err)
 	// }
-	accessToken := "4_nWUW1okh50bZKq0j7y53oS-hKzRRT3IBvvHsBAGj3APCPfzsIl3qwIif1-SLOQjpDxqCX2R13zyL0_EjdAI1CWrwCfftwTbXRAFpnBuveye_lUIh2PHzY7_FHJOiPXvkLiI05C04yUcD4vyJZUCaAEANIQ"
+	accessToken := "4_wg2x9Pq8iR7pr0aOvV4vNJHZohDIxLoNN_E_Lz5GSGNsMs-Z2qcZrWs9L_sUamY7MHbF05EBz9RyEwO6wWmFnRwjdhbi8LeRaoXVlBRwiFEHKYso-svQkoRcK-nuEK6zM3h6HmPS8_6rVDnoQQQbAHAUUU"
 	menuStr := `{
 		"button": [
 		{
 			"name": "进入商城",
 			"type": "view",
-			"url": "wxaj.shdev.cpchina.cn/wx/1"
+			"url": "http://wxaj.shdev.cpchina.cn/wx/1"
 		},
 		{
 
@@ -40,11 +40,6 @@ func (c *WxConnectController) Createmenu() {
 					"type": "click",
 					"key": "molan_institution"
 					}]
-		},
-		{
-			"name": "资料修改",
-			"type": "view",
-			"url": "http://www.baidu.com/user_view"
 		}
 		]
 	}`
@@ -52,4 +47,7 @@ func (c *WxConnectController) Createmenu() {
 	// wxutils.PushWxMenuCreate(accessToken, []byte(menuStr))
 	wxutils.PushWxMenuDelete(accessToken)
 	c.Ctx.WriteString(accessToken)
+}
+func (c *WxConnectController) demo() {
+
 }
